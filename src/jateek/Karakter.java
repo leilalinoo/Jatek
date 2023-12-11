@@ -1,8 +1,9 @@
 package jateek;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Karakter {
+public class Karakter  implements Serializable{
 
     private ArrayList<Targy> felszereles;
     private String faj;
