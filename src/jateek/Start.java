@@ -7,4 +7,14 @@ public class Start extends Helyszin {
         return "Ez a start, haladj tovább!";
     }
 
+    @Override
+    public Helyszin egyikIany() {
+        return new Kezdes();
+    }
+
+    @Override
+    public String egyikBtnFelirata() {
+        return "** Egyik iránY **";
+    }
+
 }
