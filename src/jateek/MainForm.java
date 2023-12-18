@@ -19,6 +19,7 @@ public class MainForm extends javax.swing.JFrame {
         jTextArea1.setText(st.leiras());
         jButton1.setVisible(false);
         jButton2.setText("TOVÁBB");
+        
     }
 
     /**
@@ -47,6 +48,11 @@ public class MainForm extends javax.swing.JFrame {
         jButton1.setText("Másik irány");
 
         jButton2.setText("Egyik irány");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -77,6 +83,13 @@ public class MainForm extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    //egyik irány
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+       //naiv megoldás
+        Helyszin helyszin = new Kezdes();
+       jTextArea1.setText(helyszin.leiras());
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
