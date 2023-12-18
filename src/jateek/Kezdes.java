@@ -1,6 +1,6 @@
 package jateek;
 
-public class Kezdes extends Helyszin {
+public class Kezdes extends Helyszin implements MasikIrany {
 
     @Override
     public String leiras() {
@@ -9,7 +9,7 @@ public class Kezdes extends Helyszin {
 
     @Override
     public Helyszin egyikIany() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return new Balra();
     }
 
         @Override

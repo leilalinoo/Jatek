@@ -11,13 +11,18 @@ package jateek;
 public class MainForm extends javax.swing.JFrame {
 
     private Helyszin helyszin;
+
     public MainForm() {
         initComponents();
         helyszin = new Start();
         jTextArea1.setText(helyszin.leiras());
         jButton1.setVisible(false);
+        if (helyszin instanceof MasikIrany) {
+            jButton1.setVisible(true);
+        } else {
+            jButton1.setVisible(false);
+        }
         jButton2.setText(helyszin.egyikBtnFelirata());
-        
     }
 
     /**
@@ -90,41 +95,19 @@ public class MainForm extends javax.swing.JFrame {
 
     //egyik irány
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-       helyszin = helyszin.egyikIany();
-       jTextArea1.insert(helyszin.leiras()+"\n", 0);
-       jTextArea1.insert(helyszin.leiras()+"\n", 0);
-       jTextArea1.insert(helyszin.leiras()+"\n", 0);
-       jTextArea1.insert(helyszin.leiras()+"\n", 0);
-       jTextArea1.insert(helyszin.leiras()+"\n", 0);
-       jTextArea1.insert(helyszin.leiras()+"\n", 0);
-       jTextArea1.insert(helyszin.leiras()+"\n", 0);
-       jTextArea1.insert(helyszin.leiras()+"\n", 0);
-       jTextArea1.insert(helyszin.leiras()+"\n", 0);
-       jTextArea1.insert(helyszin.leiras()+"\n", 0);
-       jTextArea1.insert(helyszin.leiras()+"\n", 0);
-       jTextArea1.insert(helyszin.leiras()+"\n", 0);
-       jTextArea1.insert(helyszin.leiras()+"\n", 0);
-       jTextArea1.insert(helyszin.leiras()+"\n", 0);
-       jTextArea1.insert(helyszin.leiras()+"\n", 0);
-       jTextArea1.insert(helyszin.leiras()+"\n", 0);
-       jTextArea1.insert(helyszin.leiras()+"\n", 0);
-       jTextArea1.insert(helyszin.leiras()+"\n", 0);
-       jTextArea1.insert(helyszin.leiras()+"\n", 0);
-       jTextArea1.insert(helyszin.leiras()+"\n", 0);
-       jTextArea1.insert(helyszin.leiras()+"\n", 0);
-       jTextArea1.insert(helyszin.leiras()+"\n", 0);
-       jTextArea1.insert(helyszin.leiras()+"\n", 0);
-       jTextArea1.insert(helyszin.leiras()+"\n", 0);
-       jTextArea1.insert(helyszin.leiras()+"\n", 0);
-       jTextArea1.insert(helyszin.leiras()+"\n", 0);
-       jTextArea1.insert(helyszin.leiras()+"\n", 0);
-       jTextArea1.insert(helyszin.leiras()+"\n", 0);
-       jTextArea1.insert(helyszin.leiras()+"\n", 0);
-       jTextArea1.insert(helyszin.leiras()+"\n", 0);
-       
-       jTextArea1.setCaretPosition(0);
-       jButton2.setText(helyszin.egyikBtnFelirata());
-       
+        helyszin = helyszin.egyikIany();
+        jTextArea1.insert(helyszin.leiras() + "\n", 0);
+
+        jTextArea1.setCaretPosition(0);
+        jButton2.setText(helyszin.egyikBtnFelirata());
+
+        if (helyszin instanceof MasikIrany) {
+            jButton1.setVisible(true);
+        } else {
+            jButton1.setVisible(false);
+        }
+
+
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
