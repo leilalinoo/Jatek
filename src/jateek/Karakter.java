@@ -12,6 +12,4 @@ public class Karakter {
         this.szerencse = szerencse;
     }
 
-    
-
 }
